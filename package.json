@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "start": "elm-live --dir=public  src/Main.elm -- --debug --output=public/dist/elm.compiled.js"
+    }
+}

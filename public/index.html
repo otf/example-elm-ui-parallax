@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="dist/elm.compiled.js"></script>
+  <title>example-elm-ui-parallax</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module">
+    const app = Elm.Main.init({
+        node: document.getElementById('app')
+    });
+    document.addEventListener('scroll', function(ev) {
+        app.ports.scrollReceiver.send([ window.pageXOffset, window.pageYOffset ]);
+    });
+  </script>
+</body>
+</html>
